@@ -22,7 +22,14 @@ def conversion(referenceGame, referenceSensitivity):
   destinyToValorant = 0.094286
   destinyToFortnite = 1.188119
   destinyToRainbow = 1.151917
-  
+
+  valorantToApex = 3.181818
+  valorantToDestiny = 10.606061
+  valorantToWarzone = 10.606061
+  valorantToCS = 3.181818
+  valorantToRainbow = 12.217305
+  valorantToOverwatch = 10.606061
+  valorantToFortnite = 12.60126
 
   if referenceGame == "Apex Legends" or referenceGame == "CS:GO":
     
@@ -59,13 +66,13 @@ def conversion(referenceGame, referenceSensitivity):
 
   elif referenceGame == "VALORANT":
 
-    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(3.181818)) + "!")
-    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(10.606061)) + "!")
-    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(10.606061)) + "!")
-    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(3.181818)) + "!")
-    print("Your R6S sensitivity is " + str(float(referenceSensitivity) * float(12.217305)) + "!")
-    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(10.606061)) + "!")
-    print("Your Fortnite sensitivty is " + str(float(referenceSensitivity) * float(12.60126)) + "!")
+    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(valorantToApex)) + "!")
+    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(valorantToDestiny)) + "!")
+    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(valorantToWarzone)) + "!")
+    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(valorantToCS)) + "!")
+    print("Your R6S sensitivity is " + str(float(referenceSensitivity) * float(valorantToRainbow)) + "!")
+    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(valorantToOverwatch)) + "!")
+    print("Your Fortnite sensitivty is " + str(float(referenceSensitivity) * float(valorantToFortnite)) + "!")
 
   elif referenceGame == "Fortnite":
     

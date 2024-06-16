@@ -1,5 +1,4 @@
 # Nathan Doyle
-# May 15, 2024
 # Converts the sensitivity of one FPS game into sensitivities of other FPS games.
 
 def main(): 
@@ -30,6 +29,22 @@ def conversion(referenceGame, referenceSensitivity):
   valorantToRainbow = 12.217305
   valorantToOverwatch = 10.606061
   valorantToFortnite = 12.60126
+
+  fortniteToApex = 0.2525
+  fortniteToDestiny = 0.841667
+  fortniteToWarzone = 0.841667
+  fortniteToCS = 0.2525
+  fortniteToValorant = 0.079357
+  fortniteToRainbow = 0.96953
+  fortniteToOverwatch = 0.841667
+
+  rainbowToApex = 0.260435
+  rainbowToDestiny = 0.868118
+  rainbowToWarzone = 0.868118
+  rainbowToCS = 0.260435
+  rainbowToValorant = 0.081851
+  rainbowToOverwatch = 0.868118
+  rainbowToFortnite = 1.031427
 
   if referenceGame == "Apex Legends" or referenceGame == "CS:GO":
     
@@ -76,23 +91,23 @@ def conversion(referenceGame, referenceSensitivity):
 
   elif referenceGame == "Fortnite":
     
-    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(0.2525)) + "!")
-    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(0.841667)) + "!")
-    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(0.841667)) + "!")
-    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(0.2525)) + "!")
-    print("Your VALORANT sensitivty is " + str(float(referenceSensitivity) * float(0.079357)) + "!")
-    print("Your R6S sensitivity is " + str(float(referenceSensitivity) * float(0.96953)) + "!")
-    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(0.841667)) + "!")
+    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(fortniteToApex)) + "!")
+    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(fortniteToDestiny)) + "!")
+    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(fortniteToWarzone)) + "!")
+    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(fortniteToCS)) + "!")
+    print("Your VALORANT sensitivty is " + str(float(referenceSensitivity) * float(fortniteToValorant)) + "!")
+    print("Your R6S sensitivity is " + str(float(referenceSensitivity) * float(fortniteToRainbow)) + "!")
+    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(fortniteToOverwatch)) + "!")
 
   elif referenceGame == "Rainbow 6 Siege":
     
-    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(0.260435)) + "!")
-    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(0.868118)) + "!")
-    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(0.868118)) + "!")
-    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(0.260435)) + "!")
-    print("Your VALORANT sensitivty is " + str(float(referenceSensitivity) * float(0.081851)) + "!")
-    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(0.868118)) + "!")
-    print("Your Fortnite sensitivity is " + str(float(referenceSensitivity) * float(1.031427)) + "!")
+    print("Your Apex Legends sensitivity is " + str(float(referenceSensitivity) * float(rainbowToApex)) + "!")
+    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(rainbowToDestiny)) + "!")
+    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(rainbowToWarzone)) + "!")
+    print("Your CS:GO sensitivity is " + str(float(referenceSensitivity) * float(rainbowToCS)) + "!")
+    print("Your VALORANT sensitivty is " + str(float(referenceSensitivity) * float(rainbowToValorant)) + "!")
+    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(rainbowToOverwatch)) + "!")
+    print("Your Fortnite sensitivity is " + str(float(referenceSensitivity) * float(rainbowToFortnite)) + "!")
   
   else:
     print("Error! Please try again.")

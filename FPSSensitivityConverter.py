@@ -5,10 +5,17 @@ def main():
   referenceGame = input("What is the game you are converting your sensitivty from? (Apex Legends, Destiny 2, COD: Warzone, CS:GO, VALORANT, Rainbow 6 Siege, Overwatch, Fortnite)")
   referenceSensitivity = input("What is your sensitivty in " + referenceGame + "?")
 
+  
   conversion(referenceGame, referenceSensitivity)
   
 def conversion(referenceGame, referenceSensitivity):
+
+  if referenceGame == "Apex Legends" or referenceGame == "CS:GO":
+    apexLegends(referenceGame)
   
+def apexLegends(referenceGame)
+
+  apexConversions = {'Destiny':  3.333333, 'Warzone': 3.333333, }
   apexToDestiny = 3.333333
   apexToWarzone = 3.333333
   apexToValorant = 0.314286
@@ -16,6 +23,20 @@ def conversion(referenceGame, referenceSensitivity):
   apexToOverwatch = 3.333333
   apexToFortnite = 3.960396
 
+  if referenceGame == "Apex Legends":
+      print("CS:GO has the same sensitivity as Apex Legends.")
+    
+    else:
+      print("Apex Legends has the same sensitivity as CS:GO.")
+    
+    print("Your Destiny 2 sensitivity is " + str(float(referenceSensitivity) * float(apexConversions.get('Destiny')) + "!")
+    print("Your COD: Warzone sensitivity is " + str(float(referenceSensitivity) * float(apexToWarzone)) + "!")
+    print("Your VALORANT sensitivity is " + str(float(referenceSensitivity) * float(apexToValorant)) + "!")
+    print("Your R6S sensitivity is " + str(float(referenceSensitivity) * float(apexToRainbow)) + "!")
+    print("Your Overwatch sensitivity is " + str(float(referenceSensitivity) * float(apexToOverwatch)) + "!")
+    print("Your Fortnite sensitivty is " + str(float(referenceSensitivity) * float(apexToFortnite)) + "!")
+
+--------------------------------------------------------------------------------------------------------------
   destinyToApex = 0.3
   destinyToCS = 0.3
   destinyToValorant = 0.094286
